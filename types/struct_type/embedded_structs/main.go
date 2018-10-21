@@ -4,33 +4,33 @@ package main
 import "fmt"
 
 // A struct is a type which contains named fields
-type passenger struct {
-	Name         string
-	Age          int
-	Gender       string
-	TicketNumber int
+type Passenger struct {
+	name         string
+	age          int
+	gender       string
+	ticketNumber int
 }
 
 type secretAgent struct {
-	passenger
+	Passenger
 	wears string
 }
 
 func main() {
 
 	p1 := secretAgent{
-		passenger: passenger{
-			Name:         "Tim",
-			Age:          28,
-			Gender:       "Male",
-			TicketNumber: 12345},
+		Passenger: Passenger{
+			name:         "Tim",
+			age:          28,
+			gender:       "Male",
+			ticketNumber: 12345},
 		wears: "suit"}
 	fmt.Println(p1)
-	fmt.Println(p1.passenger.TicketNumber)
+	fmt.Println(p1.Passenger.ticketNumber)
 
-	p2 := passenger{Name: "Alan", Age: 34, Gender: "Male", TicketNumber: 12344}
+	p2 := Passenger{name: "Alan", age: 34, gender: "Male", ticketNumber: 12344}
 	fmt.Println(p2)
-	fmt.Println(p2.Age)
+	fmt.Println(p2.age)
 
 }
 
